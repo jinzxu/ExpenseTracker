@@ -1,7 +1,7 @@
 import './ExpenseDate.css'
 const ExpenseDate = (props) => {
     console.log("ExpensesDate props: ", props)
-    const expenseDate = props.date;
+    const expenseDate = new Date(props.date);
     const month = expenseDate.toLocaleString("en-US", { month: "long" });
     const day = expenseDate.toLocaleString("en-US", { day: "2-digit" });
     const year = expenseDate.getFullYear();
