@@ -11,8 +11,8 @@ const NewExpense = (props) => {
     const saveUserInputHandler = userInput => {
         newExpense = {
             title: userInput.title,
-            amount: userInput.amount,
-            date: userInput.date
+            amount: parseFloat(userInput.amount),
+            date: new Date(userInput.date)
         }
         props.onAddNewExpense(newExpense)
     };
