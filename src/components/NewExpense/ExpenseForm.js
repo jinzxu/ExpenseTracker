@@ -59,7 +59,7 @@ const ExpenseForm = (props) => {
                 <div className='new-expense__control'>
                     <label>Date</label>
                     <input
-                        type='date'
+                        type='datetime-local'
                         min='2019-01-01'
                         max='2022-12-31'
                         value={userInput.date}
