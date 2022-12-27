@@ -14,15 +14,15 @@ const Expenses = (props) => {
             <ExpensesFilter
                 onSaveYearFilter={saveYearFilterHandler}
             />
-            {items.map(item =>
-            (
+            {console.log(items)}
+            {items.map((expense) => (
                 <ExpenseItem
-                    title={item.title}
-                    amount={item.amount}
-                    date={item.date}
-                ></ExpenseItem>
-            )
-            )}
+                    key={expense.id}
+                    title={expense.title}
+                    amount={expense.amount}
+                    date={expense.date}
+                />
+            ))}
         </Card>
     )
 }
